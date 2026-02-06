@@ -1,0 +1,24 @@
+// ignore_for_file: public_member_api_docs, sort_constructors_first
+class Todo {
+  final String id;
+  final String title;
+  final String body;
+
+  Todo({
+    required this.id,
+    required this.title,
+    required this.body
+  });
+
+  Todo copyWith({
+    String? id,
+    String? title,
+    String? body,
+  }) {
+    return Todo(
+      id: id ?? this.id,
+      title: title ?? this.title,
+      body: body ?? this.body,
+    );
+  }
+}
